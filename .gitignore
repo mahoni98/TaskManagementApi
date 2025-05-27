@@ -1,0 +1,65 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sdf
+*.vssscc
+*.buildscc
+*.csdproj
+*.webinfo
+*.publishproj
+.sqlite
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+*.build
+*.log
+
+# NuGet
+.nuget/
+*.nupkg
+*.snupkg
+**/obj/
+**/bin/
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Package Management
+packages/
+node_modules/
+
+# Other
+*.cache
+*.pid
+*.swo
+*.swp
+*.bak
+*.orig
+*.pyc
+*.class
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.pdb
+*.apk
+*.ipa
+*.ipch
+
+# User-specific files
+*.config.user
+*.json.user
+
+# App specific
+appsettings.Development.json # If you want to keep your local settings out of git (e.g. database connection strings or JWT keys for local dev)
