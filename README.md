@@ -34,7 +34,7 @@ Projeyi lokalinizde çalıştırabilmek için aşağıdaki adımları takip edin
 1.  **Projeyi Klonlayın:**
     ```bash
     git clone <proje-depo-url>
-    cd <proje-klasoru> # Örneğin: cd GorevYonetimAPI
+  
     ```
 
 2.  **Veritabanı Bağlantı Dizgesini Ayarlayın:**
@@ -54,7 +54,7 @@ Projeyi lokalinizde çalıştırabilmek için aşağıdaki adımları takip edin
     ```
 
 3.  **Veritabanı Migrasyonlarını Uygulayın:**
-    * Proje klasörünün kök dizininde (yani `.sln` dosyasının olduğu yerde) bir terminal veya komut istemcisi açın.
+    * api klasörünün kök dizininde  bir terminal veya komut istemcisi açın.
     * Aşağıdaki komutu çalıştırarak veritabanını oluşturun ve migrasyonları uygulayın:
         ```bash
         dotnet ef database update
