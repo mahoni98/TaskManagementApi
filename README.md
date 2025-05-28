@@ -41,13 +41,13 @@ Projeyi lokalinizde çalıştırabilmek için aşağıdaki adımları takip edin
     * `appsettings.json` dosyasını açın.
     * `"ConnectionStrings"` altındaki `"DefaultConnection"` değerini kendi yerel SQL Server kurulumunuza göre güncelleyin.
         * `Data Source=` kısmına kendi SQL Server sunucu adınızı yazın (örneğin: `(localdb)\\MSSQLLocalDB` veya `localhost\\SQLEXPRESS`).
-        * `Initial Catalog=EduDb;` kısmındaki `EduDb` veritabanı adıdır, dilerseniz değiştirebilirsiniz.
+        * `Initial Catalog=TaskManagementDb;` kısmındaki `TaskManagementDb` veritabanı adıdır, dilerseniz değiştirebilirsiniz.
 
     ```json
     // appsettings.json örneği
     {
       "ConnectionStrings": {
-        "DefaultConnection": "Data Source=YOUR_SERVER_NAME;Initial Catalog=EduDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+        "DefaultConnection": "Data Source=YOUR_SERVER_NAME;Initial Catalog=TaskManagementDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
       },
       // ...
     }
@@ -62,10 +62,8 @@ Projeyi lokalinizde çalıştırabilmek için aşağıdaki adımları takip edin
         *Bu komut, veritabanını oluşturacak ve (`ApplicationDBContext.cs` içindeki `OnModelCreating` ile) "Admin" ve "User" rollerini ekleyecektir.*
 
 4.  **Projeyi Çalıştırın:**
-    ```bash
-    dotnet run
-    ```
-    * Proje başarıyla başladığında, API'ye erişim portunu (`https://localhost:<port>`) terminalde göreceksiniz. Genellikle `5001` veya `7XXX` gibi bir port numarası olur.
+  
+    * Proje başarıyla başladığında, API'ye erişim portunu (`https://localhost:<port>`) terminalde göreceksiniz.
 
 ## 🧪 API Kullanımı (Swagger UI)
 
@@ -81,7 +79,7 @@ Proje çalıştığında, API endpoint'lerini test etmek için otomatik olarak o
     * `username`, `email` ve `password` bilgilerini içeren bir istek gövdesi girin (örn: `{"userName": "testuser", "email": "test@example.com", "password": "Password123!"}`).
     * "Execute" butonuna tıklayın. Başarılı bir yanıtta, bir JWT `token` alacaksınız. Bu token'ı kopyalayın.
 
-2.  **Giriş (`/api/account/login` - POST) - *Zaten kayıtlıysanız bu adımı atlayabilirsiniz.***
+2.  **Giriş (`/api/account/login` - POST) - 
     * Eğer zaten kayıtlı bir kullanıcınız varsa veya token süresi dolmuşsa, bu endpoint ile giriş yapıp yeni bir token alabilirsiniz.
     * Kayıt olduğunuz `username` ve `password` ile giriş yapın ve yeni `token`'ı kopyalayın.
 
